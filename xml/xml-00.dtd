@@ -1,0 +1,11 @@
+<?xml version="1.0" enconding="UTF-8"?>
+<!ELEMENT dirección (nombreCompleto, correo, teléfono, cumple)>
+<!ELEMENT nombreCompleto (nombre, apellido)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT teléfono (#PCDATA)>
+<!ELEMENT cumple (dia, mes, anio)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>

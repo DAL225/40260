@@ -1,0 +1,19 @@
+<?xml version="1.0" enconding="UTF-8"?>
+<!DOCTYPE dirección SYSTEM "xml-00.dtd">
+<dirección>
+    <nombreCompleto>
+        <nombre>
+            Diego
+        </nombre>
+        <apellido>
+            Aburto
+        </apellido>
+    </nombreCompleto>
+    <correo>diego@gmail.com</correo>
+    <teléfono>911</teléfono>
+    <cumple>
+        <dia>25</dia>
+        <mes>02</mes>
+        <anio>2006</anio>
+    </cumple>
+</dirección>
