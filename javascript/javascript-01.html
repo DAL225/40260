@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="b">Párrafo</p>
+    <input type=""text id="1"></inpupt>
+    <input type="text" id="2"></input>
+    <button id="suma">suma</button>
+    <script>
+        //Funcion anónima
+        const x = function (a,b) {return a-b}
+        let sumaBoton = document.getElementById("suma")
+        suma.addEventListener("click", function () {
+            let a = document.getElementById("1").value
+            let b = document.getElementById("2").value
+            let resultado = x(a,b)
+            document.getElementById("b").innerText = resultado
+        })
+
+        //Funcion de flecha
+//        const x = function (a,b) {return a+b}
+  //      let sumaBoton = document.getElementById("suma")
+    //    suma.addEventListener("click", () =>{
+      //      let a = document.getElementById("1").value
+        //    let b = document.getElementById("2").value
+          //  let resultado = x(a,b)
+            //document.getElementById("b").innerText = resultado
+//        })
+    </script>
+</body>
+</html>

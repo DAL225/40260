@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">Título</h1>
+    <p id="b">Párrafo</p>
+    <button id ="c" onclick="escribe()">Botón</button>
+    <input type="text" id="in1">
+    <br>
+    <br>
+    <button id ="d">otro botón</button>
+    <script>
+        // AAAAAAAAAAAAAAAAAAAAAAAA
+        function hola(){
+           console.log("el volcán de parangaricutifimicuaro lo quieren desparangaricutirimicuarizar, el que lo desparangaricutirimicuarize, será un buen desparangaricutirimicuarizador"+i)
+        }
+
+        for(i = 0; i<10; i++)
+        if(i==5)
+            hola()
+        
+        let boton = document.getElementById("c")
+
+        function escribe(){
+            console.log(document)
+            const html = document.getElementById("b")
+            console.log(html.innerText)
+
+            let entrada = document.getElementsByTagName("input")
+            console.log(entrada[0].value)
+            html.innerHTML = entrada[0].value
+//          for (const key in entrada) {
+//              if (!Object.hasOwn(entrada, key)) continue;
+//            
+//              const element = entrada[key];
+//              console.log(element.in)
+//            
+//          }
+        }
+        let color = document.getElementById("d")
+        //color.addEventListener("click",cambiarColor)
+        color.addEventListener("click", cambiarColor())
+
+        function cambiarColor(){
+            let entrada = document.getElementByTagName("input")
+            let titulo = document.getElementById("a")
+            titulo.style.color = entrada[0].value
+        }
+    </script>
+</body>
+</html>
