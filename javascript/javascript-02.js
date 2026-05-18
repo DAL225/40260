@@ -29,14 +29,8 @@ for (const key in operadores) {
 
 function operacion(e){
     console.log(e.target.innerText)
-    if (e.target.innerText == "+")
-        suma()
-    if (e.target.innerText == "-")
-        resta()
-    if (e.target.innerText == "*")
-        multiplicacion()
-    if (e.target.innerText == "/")
-        division()
+    if (e.target.innerText == "+" | e.target.innerText == "-" | e.target.innerText == "*" | e.target.innerText == "/")
+        parametroAlmacenado(e)
     if (e.target.innerText == "C")
         limpiar()
     if (e.target.innerText == "=")
@@ -47,56 +41,52 @@ let var1
 let var2
 let operacionActual
 
-function suma(){
-    var1 = resultado.value
+function parametroAlmacenado(e){
+    parametros.push(resultado.value)
+    eventos.push(resultado.value)
     resultado.value = null
-    var2 = resultado.value
-    console.log(var1+var2)
-    operacionActual = "+"
-    console.log(operacionActual)
-}
-
-function resta(){
-    var1 = resultado.value
-    resultado.value = null
-    var2 = resultado.value
-    console.log(var1-var2)
-    operacionActual = "-"
-    console.log(operacionActual)
-}
-
-function multiplicacion(){
-    var1 = resultado.value
-    resultado.value = null
-    var2 = resultado.value
-    console.log(var1*var2)
-    operacionActual = "*"
-    console.log(operacionActual)
-}
-
-function division(){
-    var1 = resultado.value
-    resultado.value = null
-    var2 = resultado.value
-    console.log(var1/var2)
-    operacionActual = "/"
-    console.log(operacionActual)
+    operacionActual = e.target.innerText
+    eventos.push(operacionActual)
 }
 
 function igual(){
-    var2 = resultado.value
-    if (operacionActual == "+")
-        resultado.value = parseInt(var1) + parseInt(var2)
-    if (operacionActual == "-")
-        resultado.value = parseInt(var1) - parseInt(var2)
-    if (operacionActual == "*")
-        resultado.value = parseInt(var1) * parseInt(var2)
-    if (operacionActual == "/")
-        resultado.value = parseInt(var1) / parseInt(var2)
+    let variable = null
+    parametros.push(resultado.value)
+    eventos.push(resultado.value)
+    for (const key in parametros) {
+        if (Object.prototype.hasOwnProperty.call(parametros, key)){
+            const parametro = parametros[key]
+            if (operacionActual == "+")
+                variable += parseInt(parametro)
+            if (operacionActual == "-")
+                if (variable == null) {
+                    variable = parseInt(parametro)
+                } else {
+                    variable -= parseInt(parametro)
+                }
+            if (operacionActual == "*")
+                if (variable == null) {
+                    variable = parseInt(parametro)
+                } else {
+                    variable *= parseInt(parametro)
+                }
+            if (operacionActual == "/")
+                if (variable == null) {
+                    variable = parseInt(parametro)
+                } else {
+                    variable /= parseInt(parametro)      
+                }
+        }
+    }
+    resultado.value = variable
 }
 
 function limpiar(){
     var1 = null
     var2 = null
+    parametros = []
     resultado.value = null
 }
+
+let parametros = []
+let eventos = []
