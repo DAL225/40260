@@ -1,0 +1,2 @@
+(()=>{function e(o){return console.log("Yveltal: "+o),"Yveltal used Oblivion Wing"}function r(o){return e("Xerneas"),console.log("Xerneas: "+o),"Xerneas used Moonblast"}function n(o){console.log("Xerneas used Geocontrol")}function l(o){return console.log("Zygarde: "+o),"Zygarde used Core Enforcer"}console.log(r("abc"));console.log(n("def"));console.log(e("ghi"));console.log(l("jkl"));})();
+//# sourceMappingURL=xyz.js.map

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../y.js", "../x.js", "../z.js", "../xyz.js"],
+  "sourcesContent": ["export function y(parametro){\r\n    console.log(\"Yveltal: \"+parametro)\r\n    return \"Yveltal used Oblivion Wing\"\r\n}", "import { y } from \"./y.js\"\r\n\r\nfunction x(parametro){\r\n    y(\"Xerneas\")\r\n    console.log(\"Xerneas: \"+parametro)\r\n    return \"Xerneas used Moonblast\"\r\n}\r\n\r\nfunction xx(parametro){\r\n    console.log(\"Xerneas used Geocontrol\")\r\n}\r\n\r\nexport {x, xx}", "export function z(parametro){\r\n    console.log(\"Zygarde: \"+parametro)\r\n    return \"Zygarde used Core Enforcer\"\r\n}", "import * as modulo from \"./x.js\"\r\nimport { y } from \"./y.js\"\r\nimport { z } from \"./z.js\"\r\n\r\nconsole.log(modulo.x(\"abc\"))\r\nconsole.log(modulo.xx(\"def\"))\r\nconsole.log(y(\"ghi\"))\r\nconsole.log(z(\"jkl\"))"],
+  "mappings": "MAAO,SAASA,EAAEC,EAAU,CACxB,eAAQ,IAAI,YAAYA,CAAS,EAC1B,4BACX,CCDA,SAASC,EAAEC,EAAU,CACjB,OAAAC,EAAE,SAAS,EACX,QAAQ,IAAI,YAAYD,CAAS,EAC1B,wBACX,CAEA,SAASE,EAAGF,EAAU,CAClB,QAAQ,IAAI,yBAAyB,CACzC,CCVO,SAASG,EAAEC,EAAU,CACxB,eAAQ,IAAI,YAAYA,CAAS,EAC1B,4BACX,CCCA,QAAQ,IAAWC,EAAE,KAAK,CAAC,EAC3B,QAAQ,IAAWC,EAAG,KAAK,CAAC,EAC5B,QAAQ,IAAIC,EAAE,KAAK,CAAC,EACpB,QAAQ,IAAIC,EAAE,KAAK,CAAC",
+  "names": ["y", "parametro", "x", "parametro", "y", "xx", "z", "parametro", "x", "xx", "y", "z"]
+}
